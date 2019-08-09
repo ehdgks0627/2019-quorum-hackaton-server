@@ -1,0 +1,42 @@
+{
+  "name": "2019-quorum-hackaton-server",
+  "version": "1.0.0",
+  "description": "skeleton nodejs project with webpack for bundling and babel for transpiling",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "rm -rf dist && babel src -w -d dist --copy-files --ignore src/public",
+    "start": "node dist/app.js",
+    "restart": "timeout 3 npm run build; npm run start"
+  },
+  "author": "karim",
+  "license": "MIT",
+  "dependencies": {
+    "apicache": "^1.4.0",
+    "app-module-path": "^2.2.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^2.6.2",
+    "ethereumjs-tx": "^2.1.0",
+    "express": "~4.16.1",
+    "express-session": "^1.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "mysql": "^2.17.1",
+    "redis": "^2.8.0",
+    "socket.io": "^2.2.0",
+    "solc": "^0.5.8",
+    "vuex": "^3.1.1",
+    "web3": "^1.0.0-beta.55"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.12.1",
+    "npm-run-all": "^4.1.1",
+    "regenerator-runtime": "^0.12.1",
+    "webpack": "^3.8.1"
+  }
+}
